@@ -23,6 +23,7 @@ mongoose.connect(
     console.log("Connected to MongoDB");
   }
 );
+const uri = process.env.MONGODB_URI;
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 //middleware
