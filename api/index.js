@@ -16,14 +16,12 @@ const path = require("path");
 dotenv.config();
 
 mongoose.connect(
-   process.env.MONGODB_URI,
-  // process.env.MONGO_URL,
+   process.env.MONGO_URI,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log("Connected to MongoDB");
   }
 );
-const uri = process.env.MONGODB_URI;
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 //middleware
