@@ -7,7 +7,7 @@ import { CircularProgress } from "@material-ui/core";
 export default function Login() {
   const email = useRef();
   const password = useRef();
-  const { isFetching, dispatch } = useContext(AuthContext);
+  const { isFetching, error, dispatch } = useContext(AuthContext);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -43,6 +43,7 @@ export default function Login() {
               className="loginInput"
               ref={password}
             />
+            <div className="alert"> {error}</div>
             <button className="loginButton" type="submit" disabled={isFetching}>
               {isFetching ? (
                 <CircularProgress color="white" size="20px" />

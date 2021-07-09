@@ -1,3 +1,4 @@
+
 import { useContext, useEffect, useState } from "react";
 import Post from "../post/Post";
 import Share from "../share/Share";
@@ -32,5 +33,4 @@ export default function Feed({ username }) {
         ))}
       </div>
     </div>
-  );
-}
+)}

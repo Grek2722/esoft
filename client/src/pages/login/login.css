@@ -90,3 +90,6 @@
     font-weight: 500;
     cursor: pointer;
 }
+.alert {
+  color: red
+}
